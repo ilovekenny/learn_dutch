@@ -1,0 +1,4 @@
+google
+google.generativeai
+numpy
+matplotlib
