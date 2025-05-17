@@ -3,3 +3,5 @@ var.txt
 input*.txt
 *.db
 backlog.txt
+*.pyc
+__pychache__/
