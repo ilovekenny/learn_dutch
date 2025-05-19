@@ -3,5 +3,6 @@ var.txt
 input*.txt
 *.db
 backlog.txt
-*.pyc
-__pychache__/
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
