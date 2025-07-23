@@ -71,6 +71,13 @@ class WordList:
         self.cursor.execute(f"DELETE FROM {self.table_name} WHERE id = ?;", (word_id,))
         self.conn.commit()
 
+    def update_score(self, word_id, new_score: float):
+        if new_score >= 0.0 and new_score <= 1.0:
+            self.cursor.execute(f"UPDATE {self.table_name} SET score= {new_score} WHERE id = ?;", (word_id,))
+            self.conn.commit()
+        else:
+            print(f"Warning: new score {new_score} is out of range 0<=new_score<=1")
+
     def empty_the_list(self):
         full_list = self.get_all_words()
         for i, item in enumerate(full_list):
